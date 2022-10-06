@@ -1,0 +1,33 @@
+﻿@page "/"
+
+<PageTitle>@title</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="@description">
+    <meta property="og:title" content="@title">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="@img_path">
+    <meta property="og:url" content="@url">
+    <link rel="canonical" href="@url" />
+    <meta itemprop="name" content="@title">
+    <meta itemprop="description" content="@description">
+    <meta itemprop="image" content="@img_path">
+    <meta name="twitter:card" content="@description">
+    <meta name="twitter:url" content="@url">
+    <meta name="twitter:title" content="@title">
+    <meta name="twitter:description" content="@description">
+    <meta name="twitter:image" content="@img_path">
+</HeadContent>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code {
+    public string description = "Description set by component";
+    public string title = "Title set by component";
+    public string img_path = "Title set by component";
+    public string url = "Title set by component";
+}
