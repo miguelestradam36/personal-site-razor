@@ -8,12 +8,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="~/" />
-    <link href="favicon.webp" rel="icon">
-    <link href="favicon.webp" rel="apple-touch-icon">
+    <link href="~/favicon.webp" rel="icon">
+    <link href="~/favicon.webp" rel="apple-touch-icon">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="css/site.css" rel="stylesheet" />
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="miguelestradam.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
@@ -22,12 +22,13 @@
         <section class="row col-12 m-2">
             <nav class="navbar navbar-light bg-light">
                 <div class="row">
-                    <div class="col-md-6">
-                        <a class="navbar-brand" href="#">
-                            <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+                    <div class="col-2">
+                        <a class="navbar-brand" href="">
+                            <img src="~/favicon.webp" width="30" height="30" class="d-inline-block align-top" alt="">
                         </a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-10">
+                        <h3 align="center" style="font-size:18px; text-align: center;">Miguel Estrada | Personal Website</h3>
                     </div>
                 </div>
             </nav>
@@ -46,41 +47,62 @@
     </div>
     <footer id="footer">
         <section class="row col-12 m-1">
-            <div class="row">
+            <div id="footer-content" class="row">
                 <div class="md-6">
-
+                    <div class="d-flex p-2">
+                        <img src="~/favicon.webp" width="30" height="30" class="d-inline-block align-top" alt="">
+                    </div>
                 </div>
                 <div class="md-6">
-                    <div class="bd-example">
-                        <address>
-                            <strong>Twitter, Inc.</strong><br />
-                            1355 Market St, Suite 900<br />
-                            San Francisco, CA 94103<br />
-                            <abbr title="Phone">P:</abbr> (123) 456-7890
-                        </address>
-
-                        <address>
-                            <strong>Full Name</strong><br />
-                            <a href="mailto:#">first.last@example.com</a>
-                        </address>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4 name="name" class="align-text-top m-1 p-2">
+                                Miguel Estrada | Personal Site
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="list-group">
+                        <div class="list-group-item">
+                            <address>
+                                <label name="name" class="">
+                                    <strong>Address</strong><br />
+                                </label>
+                                <p class="text-muted">
+                                    1355 Market St, Suite 900<br />
+                                    San Francisco, CA 94103<br />
+                                </p>
+                                <button name="phone" class="">
+                                    <abbr title="phone"></abbr>(123) 456-7890
+                                </button>
+                            </address>
+                        </div>
+                        <div class="list-group-item">
+                            <address>
+                                <label name="email" class="btn btn-info">
+                                    <strong>Email</strong>
+                                </label>
+                                <br />
+                                <a href="mailto:miguelestradam36@gmail.com">miguelestradam36@gmail.com</a>
+                            </address>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="md-3">
-                    <img src="" width="10" height="10" class="align-center" alt="">
+            <div id="social" class="row">
+                <div class="col-3">
+                    <a href="" id="github"><i class="bx bx-github"></i></a>
                 </div>
-                <div class="md-3">
-                    <img src="" width="10" height="10" class="align-center" alt="">
+                <div class="col-3">
+                    <a href="" id="linkedin"><i class="bx bx-linkedin"></i></a>
                 </div>
-                <div class="md-3">
-                    <img src="" width="10" height="10" class="align-center" alt="">
+                <div class="col-3">
+                    <a href="" id="instagram"><i class="bx bx-instagram"></i></a>
                 </div>
-                <div class="md-3">
-                    <img src="" width="10" height="10" class="align-center" alt="">
+                <div class="col-3">
+                    <a href="" id="facebook"><i class="bx bx-facebook"></i></a>
                 </div>
             </div>
-            <div class="row m-2">
+            <div id="credits" class="row m-2">
                 <div class="col-12 m-1 text-center">
                     <p class="text-align">© Developed by Miguel Estrada</p>
                 </div>

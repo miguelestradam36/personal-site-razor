@@ -4,6 +4,29 @@
 @using miguelestradam.Data
 @inject WeatherForecastService ForecastService
 
+<PageTitle>@title</PageTitle>
+
+<HeadContent>
+    <link href="vendor/aos/aos.css" rel="stylesheet">
+    <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="@description">
+    <meta property="og:title" content="@title">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="@img_path">
+    <meta property="og:url" content="@url">
+    <link rel="canonical" href="@url" />
+    <meta itemprop="name" content="@title">
+    <meta itemprop="description" content="@description">
+    <meta itemprop="image" content="@img_path">
+    <meta name="twitter:card" content="@description">
+    <meta name="twitter:url" content="@url">
+    <meta name="twitter:title" content="@title">
+    <meta name="twitter:description" content="@description">
+    <meta name="twitter:image" content="@img_path">
+</HeadContent>
+
 <h1>Weather forecast</h1>
 
 <p>This component demonstrates fetching data from a service.</p>
@@ -44,4 +67,8 @@ else
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
+    public string description = "Description set by component";
+    public string title = "Title set by component";
+    public string img_path = "Title set by component";
+    public string url = "Title set by component";
 }

@@ -22,6 +22,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+/*
 app.Lifetime.ApplicationStarted.Register(() =>
 {
     var currentTimeUTC = DateTime.UtcNow.ToString();
@@ -31,11 +32,12 @@ app.Lifetime.ApplicationStarted.Register(() =>
     app.Services.GetService<IDistributedCache>()
                               .Set("cachedTimeUTC", encodedCurrentTimeUTC, options);
 });
+*/
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
-
+app.MapRazorPages();
 app.Run();
