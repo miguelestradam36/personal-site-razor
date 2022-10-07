@@ -1,19 +1,39 @@
 ﻿@inherits LayoutComponentBase
 
-<PageTitle>miguelestradam</PageTitle>
-
 <div class="page">
     <div class="sidebar">
         <NavMenu />
     </div>
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+    <main id="main">
+        <section class="row col-12 m-1">
+            <div class="top-row px-4">
+                <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            </div>
 
-        <article class="content px-4">
-            @Body
-        </article>
+            <article class="content px-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <BreadCrumb />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        @Body
+                    </div>
+                </div>
+                @if (paginate == true)
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            <Pagination />
+                        </div>
+                    </div>
+                }
+            </article>
+        </section>
     </main>
 </div>
+@code {
+    public bool paginate = false;
+}

@@ -1,5 +1,4 @@
-﻿@page "/counter"
-
+﻿@page "/about"
 <PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
@@ -9,6 +8,7 @@
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
+    public bool paginate = true;
     private int currentCount = 0;
 
     private void IncrementCount()

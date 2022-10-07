@@ -12,21 +12,28 @@
     <link href="favicon.webp" rel="apple-touch-icon">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="miguelestradam.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
-
-    <header>
-
+    <header id="header">
+        <section class="row col-12 m-2">
+            <nav class="navbar navbar-light bg-light">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="navbar-brand" href="#">
+                            <img src="" width="30" height="30" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </nav>
+        </section>
     </header>
-
     @RenderBody()
-
-    <footer>
-
-    </footer>
-
     <div id="blazor-error-ui">
         <environment include="Staging,Production">
             An error has occurred. This application may no longer respond until reloaded.
@@ -37,7 +44,49 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
+    <footer id="footer">
+        <section class="row col-12 m-1">
+            <div class="row">
+                <div class="md-6">
 
+                </div>
+                <div class="md-6">
+                    <div class="bd-example">
+                        <address>
+                            <strong>Twitter, Inc.</strong><br />
+                            1355 Market St, Suite 900<br />
+                            San Francisco, CA 94103<br />
+                            <abbr title="Phone">P:</abbr> (123) 456-7890
+                        </address>
+
+                        <address>
+                            <strong>Full Name</strong><br />
+                            <a href="mailto:#">first.last@example.com</a>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="md-3">
+                    <img src="" width="10" height="10" class="align-center" alt="">
+                </div>
+                <div class="md-3">
+                    <img src="" width="10" height="10" class="align-center" alt="">
+                </div>
+                <div class="md-3">
+                    <img src="" width="10" height="10" class="align-center" alt="">
+                </div>
+                <div class="md-3">
+                    <img src="" width="10" height="10" class="align-center" alt="">
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="col-12 m-1 text-center">
+                    <p class="text-align">© Developed by Miguel Estrada</p>
+                </div>
+            </div>
+        </section>
+    </footer>
     <script src="_framework/blazor.server.js"></script>
 </body>
 </html>
