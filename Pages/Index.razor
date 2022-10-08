@@ -10,23 +10,26 @@
     <meta name="description" content="@description">
     <meta property="og:title" content="@title">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="@img_path">
     <meta property="og:url" content="@url">
     <link rel="canonical" href="@url" />
     <meta itemprop="name" content="@title">
     <meta itemprop="description" content="@description">
-    <meta itemprop="image" content="@img_path">
     <meta name="twitter:card" content="@description">
     <meta name="twitter:url" content="@url">
     <meta name="twitter:title" content="@title">
     <meta name="twitter:description" content="@description">
-    <meta name="twitter:image" content="@img_path">
 </HeadContent>
 
-<h1>Hello, world!</h1>
+<section id="content" class="m-2 p-1">
+    <div class="" style="width: 18rem;">
+        <h1 class="text-muted"></h1>
+    </div>
+    <div class="" style="width: 18rem;">
+        <h2 class="text-muted">@title</h2>
+    </div>
+</section>
 
-Welcome to your new app.
-<section class="m-2 p-1">
+<section id="content" class="m-2 p-1">
     <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
@@ -38,11 +41,12 @@ Welcome to your new app.
     </div>
 </section>
 
+
+<h2>@title</h2>
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 @code {
-    public string description = "Description set by component";
-    public string title = "Title set by component";
-    public string img_path = "Title set by component";
-    public string url = "Title set by component";
+    public string description = "";
+    public string title = "Home | Miguel Estrada Personal Site";
+    public string url = "https://miguel-estrada.azurewebsites.net";
 }

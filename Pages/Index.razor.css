@@ -1,0 +1,12 @@
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace miguelestradam.Pages
+{
+    public class Index : Controller
+    {
+        public IActionResult Index()
+        {
+            return View();
+        }
+    }
+}

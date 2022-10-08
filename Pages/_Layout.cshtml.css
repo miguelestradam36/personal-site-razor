@@ -1,17 +1,36 @@
 ﻿#footer-content{
-
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
+    #footer-content img {
+        padding:5%;
+    }
 #footer {
     background-color: #000000;
     color: #FFFFFF;
 }
 #social {
-    background:;
+    background: inherit;
+    color: #E5E4E2 !important;
+    border: 2px solid inherit;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 10px;
 }
 #credits {
-    background-color: inherit;
-
+    background-color: #E5E4E2 !important;
+    color: #000000;
+    border: 2px solid inherit;
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 10px;
 }
+    #credits div {
+        margin-top: 10px;
+        padding: 10px;
+        text-align:center !important;
+    }
+        #credits div img {
+            text-align: center;
+        }
 #header{
 
 }

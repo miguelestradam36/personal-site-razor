@@ -1,6 +1,4 @@
 ﻿@page "/contact"
-<PageTitle>Weather forecast</PageTitle>
-
 @using miguelestradam.Data
 @inject WeatherForecastService ForecastService
 
@@ -14,22 +12,29 @@
     <meta name="description" content="@description">
     <meta property="og:title" content="@title">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="@img_path">
     <meta property="og:url" content="@url">
     <link rel="canonical" href="@url" />
     <meta itemprop="name" content="@title">
     <meta itemprop="description" content="@description">
-    <meta itemprop="image" content="@img_path">
     <meta name="twitter:card" content="@description">
     <meta name="twitter:url" content="@url">
     <meta name="twitter:title" content="@title">
     <meta name="twitter:description" content="@description">
-    <meta name="twitter:image" content="@img_path">
 </HeadContent>
 
-<h1>Weather forecast</h1>
-
-<p>This component demonstrates fetching data from a service.</p>
+<section id="title" class="col-12 p-2 m-1">
+    <div class="row">
+        <h1 class="text-info"><iconify-icon icon="bi:chat-square-dots"></iconify-icon>&nbsp; Contact</h1>
+    </div>
+    <div class="row">
+        <h2 class="text-muted">@title</h2>
+    </div>
+</section>
+<section id="content" class="col-12 p-2 m-1">
+    <div class="row">
+        <p>This component demonstrates fetching data from a service.</p>
+    </div>
+</section>
 
 @if (forecasts == null)
 {
@@ -67,8 +72,7 @@ else
     {
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
     }
-    public string description = "Description set by component";
-    public string title = "Title set by component";
-    public string img_path = "Title set by component";
-    public string url = "Title set by component";
+    public string description = "Get in contact with me";
+    public string title = "Contact | Miguel Estrada Personal Site";
+    public string url = "https://miguel-estrada.azurewebsites.net/contact";
 }

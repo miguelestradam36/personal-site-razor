@@ -12,9 +12,10 @@
     <link href="~/favicon.webp" rel="apple-touch-icon">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="~/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="miguelestradam.styles.css" rel="stylesheet" />
+    <meta property="og:image" content="~/favicon.webp">
+    <meta itemprop="image" content="~/favicon.webp">
+    <meta name="twitter:image" content="~/favicon.webp">
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
 </head>
 <body>
@@ -46,14 +47,17 @@
         <a class="dismiss">🗙</a>
     </div>
     <footer id="footer">
-        <section class="row col-12 m-1">
-            <div id="footer-content" class="row">
-                <div class="md-6">
-                    <div class="d-flex p-2">
-                        <img src="~/favicon.webp" width="30" height="30" class="d-inline-block align-top" alt="">
+        <div class="row m-1">
+            <section id="footer-content" class="row">
+                <div class="col-md-6">
+                    <div class="col-12">
+                        <h4 name="name" class="align-text-top m-1 p-2">
+                            Computing self-instructed professional
+                        </h4>
                     </div>
+                    <img src="~/img/image-1.png" class="img-fluid" alt="">
                 </div>
-                <div class="md-6">
+                <div class="col-md-6">
                     <div class="row">
                         <div class="col-12">
                             <h4 name="name" class="align-text-top m-1 p-2">
@@ -64,51 +68,92 @@
                     <div class="list-group">
                         <div class="list-group-item">
                             <address>
-                                <label name="name" class="">
-                                    <strong>Address</strong><br />
-                                </label>
+                                <iconify-icon icon="bi:calendar2-minus"></iconify-icon>
+                                <br/>
+                                <label name="freelance">Contact</label>
                                 <p class="text-muted">
-                                    1355 Market St, Suite 900<br />
-                                    San Francisco, CA 94103<br />
+                                    Feel free to contact us through: <a href="contact"><a/>
                                 </p>
-                                <button name="phone" class="">
-                                    <abbr title="phone"></abbr>(123) 456-7890
-                                </button>
                             </address>
                         </div>
                         <div class="list-group-item">
                             <address>
-                                <label name="email" class="btn btn-info">
-                                    <strong>Email</strong>
-                                </label>
-                                <br />
-                                <a href="mailto:miguelestradam36@gmail.com">miguelestradam36@gmail.com</a>
+                                <iconify-icon icon="bi:briefcase"></iconify-icon>
+                                <br/>
+                                <label name="freelance">Freelancing</label>
+                                <p class="text-muted">
+                                    From websites to data management
+                                </p>
+                            </address>
+                        </div>
+                        <div class="list-group-item">
+                            <address>
+                                <iconify-icon icon="bi:phone-vibrate"></iconify-icon>
+                                <br/>
+                                <label name="phone">Phone</label>
+                                <p class="text-muted">
+                                    +(506) 6123-2691
+                                </p>
+                            </address>
+                        </div>
+                        <div class="list-group-item">
+                            <address>
+                                <iconify-icon icon="bi:pin-map"></iconify-icon>
+                                <br/>
+                                <label name="address">Address</label>
+                                <p class="text-muted">
+                                    San Jose<br />
+                                    Costa Rica
+                                </p>
+                            </address>
+                        </div>
+                        <div class="list-group-item">
+                            <address>
+                                <iconify-icon icon="bi:newspaper"></iconify-icon>
+                                <br/>
+                                <label name="email">Email:</label>&nbsp; <a href="mailto:miguelestradam36@gmail.com">miguelestradam36@gmail.com</a>
                             </address>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="social" class="row">
-                <div class="col-3">
-                    <a href="" id="github"><i class="bx bx-github"></i></a>
+            <section id="social m-1 p-2">
+                <div class="row m-2">
+                    <div align="center" class="row col-12 p-2">
+                        <div align="center" class="col-md-3">
+                            <label name="github">Github</label>
+                            <a href="" id="github"><iconify-icon icon="bi:github"></iconify-icon></a>
+                        </div>
+                        <div align="center" class="col-md-3">
+                            <label name="linkedin">Linkedin</label>
+                            <a href="" id="linkedin"><iconify-icon icon="bi:linkedin"></iconify-icon></a>
+                        </div>
+                        <div align="center" class="col-md-3">
+                            <label name="instagram">Instagram</label>
+                            <a href="" id="instagram"><iconify-icon icon="bi:instagram"></iconify-icon></a>
+                        </div>
+                        <div align="center" class="col-md-3">
+                            <label name="facebook">Facebook</label>
+                            <a href="" id="facebook"><iconify-icon icon="bi:facebook"></iconify-icon></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <a href="" id="linkedin"><i class="bx bx-linkedin"></i></a>
+            </section>
+            <section id="credits" class="row m-2">
+                <div name="logo" class="text-align-center align-center" align="center">
+                    <a class="navbar-brand" href="">
+                        <img src="~/favicon.webp" width="45" height="45" class="d-inline-block align-top" alt="">
+                    </a>
                 </div>
-                <div class="col-3">
-                    <a href="" id="instagram"><i class="bx bx-instagram"></i></a>
-                </div>
-                <div class="col-3">
-                    <a href="" id="facebook"><i class="bx bx-facebook"></i></a>
-                </div>
-            </div>
-            <div id="credits" class="row m-2">
                 <div class="col-12 m-1 text-center">
-                    <p class="text-align">© Developed by Miguel Estrada</p>
+                    <p class="p-1">© Developed by Miguel Estrada</p>
+                    <br/>
+                    <p class="text-muted">If you want to see more about this project: </p><a name="github-repo" href="https://github.com/miguelestradam36/personal-site">Github Repository</a>
                 </div>
-            </div>
+            </section>
         </section>
     </footer>
     <script src="_framework/blazor.server.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
 </body>
 </html>
