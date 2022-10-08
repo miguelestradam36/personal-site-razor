@@ -1,9 +1,7 @@
-﻿h1{
-
+﻿main section {
+    margin-bottom: 10px;
 }
-h2{
 
-}
-h3{
-
-}
+    main section div {
+        margin-top: 5px;
+    }   

@@ -1,14 +1,27 @@
-﻿#footer-content{
-    margin-bottom: 20px;
-    margin-top: 10px;
+﻿#header {
+    background-color: #E5E4E2 !important;
+    color: #000000;
 }
-    #footer-content img {
-        padding:5%;
-    }
 #footer {
     background-color: #000000;
     color: #FFFFFF;
+    border-top: 2px solid #E5E4E2;
 }
+    #footer #footer-content {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+        #footer #footer-content img {
+            padding: 5%;
+        }
+    #footer section {
+        text-align: center;
+        align-self: center;
+    }
+        #footer section div {
+            text-align: center;
+            align-self: center;
+        }
 #social {
     background: inherit;
     color: #E5E4E2 !important;
@@ -16,6 +29,10 @@
     border-radius: 20px 20px 0px 0px;
     margin-top: 10px;
 }
+    #social iconify-icon {
+        background-color: #000000 !important;
+        color: #E5E4E2 !important;
+    }
 #credits {
     background-color: #E5E4E2 !important;
     color: #000000;
@@ -31,6 +48,6 @@
         #credits div img {
             text-align: center;
         }
-#header{
-
-}
+        #credits div p {
+            padding: 10px;
+        }

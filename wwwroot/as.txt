@@ -1,0 +1,20 @@
+                               <div class="list-group-item">
+                                    <address>
+                                        <iconify-icon icon="bi:calendar2-minus"></iconify-icon>
+                                        <br/>
+                                        <label name="freelance">Contact</label>
+                                        <p class="text-muted">
+                                            Feel free to contact us through: <a href="contact"><a/>
+                                        </p>
+                                    </address>
+                                </div>
+                                <div class="list-group-item">
+                                    <address>
+                                        <iconify-icon icon="bi:briefcase"></iconify-icon>
+                                        <br/>
+                                        <label name="freelance">Freelancing</label>
+                                        <p class="text-muted">
+                                            From websites to data management
+                                        </p>
+                                    </address>
+                                </div>

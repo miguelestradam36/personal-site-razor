@@ -1,12 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿section div div img {
 
-namespace miguelestradam.Pages
-{
-    public class Index : Controller
-    {
-        public IActionResult Index()
-        {
-            return View();
-        }
-    }
 }
+#content{
+
+}
+    #content h1 {
+
+    }
+    #content h2 {
+
+    }
+
+#content-2 {
+
+}
+    #content-2 h1 {
+
+    }
+    #content-2 h2 {
+
+    }

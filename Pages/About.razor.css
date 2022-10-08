@@ -1,4 +1,8 @@
-﻿section {
-    padding-bottom: 20px;
-    padding-top: 10px;
+﻿main section {
+    margin-bottom: 10px;
 }
+
+    main section div {
+        margin-top: 5px;
+    }   
+
