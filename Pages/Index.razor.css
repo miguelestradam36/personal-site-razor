@@ -20,8 +20,3 @@
     #content-2 h2 {
 
     }
-
-.skip-navigation {
-    @include sr-only;
-    @include sr-only-focusable;
-}
