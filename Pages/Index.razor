@@ -1,4 +1,5 @@
 ﻿@page "/"
+@inject NavigationManager Navigation
 
 <PageTitle>@title</PageTitle>
 
@@ -197,6 +198,10 @@
     public string description = "Miguel Estrada's personal professional website";
     public string title = "Home | Miguel Estrada Personal Site";
     public string url = "https://miguel-estrada.azurewebsites.net";
+    private void NavigateToCounterComponent()
+    {
+        Navigation.NavigateTo("counter");
+    }
     public class ComponentMetadata
     {
         public string? Name { get; set; }
