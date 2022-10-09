@@ -1,15 +1,34 @@
-﻿<h2>Rocket Lab®</h2>
+﻿<h2>GET A PROJECT LIKE THE ONE SHOWN ABOVE ®</h2>
 
 <p>
-    User selected a window seat: @Personalized
+    Personalized design: @Personalized
 </p>
 
-<p>
-    Rocket Lab is a trademark of
-    <a href="https://www.rocketlabusa.com/">Rocket Lab USA Inc.</a>
-</p>
+@if (Name == "Azure")
+{
+    <p>
+        Rocket Lab is a trademark of
+        <a href="https://www.rocketlabusa.com/">Rocket Lab USA Inc.</a>
+    </p>
+}
+@if (Name == "Joomla")
+{
+    <p>
+        Rocket Lab is a trademark of
+        <a href="https://www.rocketlabusa.com/">Rocket Lab USA Inc.</a>
+    </p>
+}
+@if (Name == "Wordpress")
+{
+    <p>
+        Rocket Lab is a trademark of
+        <a href="https://www.rocketlabusa.com/">Rocket Lab USA Inc.</a>
+    </p>
+}
 
 @code {
     [Parameter]
-    public bool Personalized { get; set; }
+    public bool? Personalized { get; set; }
+    [Parameter]
+    public string Name { get; set; }
 }

@@ -164,12 +164,13 @@
     <div class="row p-2">
         <p>
             <label>
-                Select your transport:
+                Select your platform:
                 <select @onchange="OnDropdownChange">
                     <option value="">Select a value</option>
-                    <option value="@nameof(DynamicCont1)">Rocket Lab</option>
-                    <option value="@nameof(DynamicCont2)">SpaceX</option>
-                    <option value="@nameof(DynamicCont3)">ULA</option>
+                    @foreach (var c in components)
+                    {
+                        <option value="@c.Key">@c.Value.Name</option>
+                    }
                 </select>
             </label>
         </p>
@@ -181,15 +182,14 @@
     <div class="row">
         <div class="col-lg-12 p-1">
             <div class="border border-primary my-1 p-1">
-                <DynamicComponent Type="@selectedContent"
-                              Parameters="@components[selectedContent.Name].Parameters" />
+                <DynamicComponent Type="@selectedContent"/>
             </div>
         </div>
     </div>
     <br/>
     <hr/>
     <div class="border border-primary my-1 p-1">
-        <Result Personalized="@Personalized"/>
+        <Result Personalized="@personalization" Name="@selectedContent.Name" />
     </div>
 }
 
@@ -197,19 +197,17 @@
     public string description = "Miguel Estrada's personal professional website";
     public string title = "Home | Miguel Estrada Personal Site";
     public string url = "https://miguel-estrada.azurewebsites.net";
-
     public class ComponentMetadata
     {
         public string? Name { get; set; }
         public Dictionary<string, object> Parameters { get; set; } =
             new Dictionary<string, object>();
     }
-
     private Dictionary<string, ComponentMetadata> components =
         new()
             {
             {
-                "Websites construction",
+                "Azure",
                 new ComponentMetadata
                 {
                     Name = "Azure",
@@ -225,26 +223,17 @@
                 new ComponentMetadata { Name = "Wordpress" }
             }
             };
-
-    public Index(Dictionary<string, ComponentMetadata> components)
-    {
-        this.components = components;
-    }
-
     private Type? selectedContent;
-    private bool windowSeat;
-
+    private bool personalization;
     private bool Personalized
     {
-        get { return Personalized; }
+        get { return personalization; }
         set
         {
-            Personalized = value;
-            components[nameof(Result)].Parameters["Personalized"] =
-                windowSeat;
+            personalization = value;
+            components[nameof(Result)].Parameters["Personalized"] = personalization;
         }
     }
-
     private void OnDropdownChange(ChangeEventArgs e)
     {
         selectedContent = e.Value?.ToString()?.Length > 0 ?
