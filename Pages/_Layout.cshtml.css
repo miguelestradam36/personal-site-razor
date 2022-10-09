@@ -1,4 +1,15 @@
-﻿#header {
+﻿html, body {
+    max-width: 100% !important;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+    body .page {
+        max-width: 100% !important;
+    }
+
+#header {
     background-color: #E5E4E2 !important;
     color: #000000;
 }
@@ -45,9 +56,12 @@
         padding: 10px;
         text-align:center !important;
     }
-        #credits div img {
+        #credits div img, #credits div div {
             text-align: center;
         }
         #credits div p {
-            padding: 10px;
+            padding: 5px;
         }
+            #credits div div button {
+                text-align:center;
+            }
