@@ -1,0 +1,22 @@
+﻿@if (path_1 != null)
+{
+    <img src="@path_1">
+}
+else{
+
+}
+@if (path_2 != null)
+{
+    <img src="@path_2">
+}
+else
+{
+
+}
+@code {
+    // Demonstrates how a parent component can supply parameters
+    [Parameter]
+    public string? path_1 { get; set; }
+    [Parameter]
+    public string? path_2 { get; set; }
+}
