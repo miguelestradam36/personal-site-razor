@@ -1,6 +1,6 @@
 ﻿@page "/"
 @inject NavigationManager Navigation
-
+@using System.Collections.Generic
 <PageTitle>@title</PageTitle>
 
 <HeadContent>
@@ -154,27 +154,29 @@
 
 
 <section class="p-1 col-12">
-    <div class="row p-1">
-        <p>
-            <label>
-                <input type="checkbox" @bind="Personalized" />
-                Window Seat (Rocket Lab only)
-            </label>
-        </p>
-    </div>
     <div class="row p-2">
         <p>
             <label>
                 Select your platform:
                 <select @onchange="OnDropdownChange">
                     <option value="">Select a value</option>
-                    @foreach (var c in components)
-                    {
-                        <option value="@c.Key">@c.Value.Name</option>
-                    }
+                    <option value="@nameof(Azure)">Azure</option>
+                    <option value="@nameof(Joomla)">Joomla</option>
+                    <option value="@nameof(Wordpress)">Wordpress</option>
                 </select>
             </label>
         </p>
+    </div>
+    <div class="row p-1">
+        <div class="col-lg-12 p-1">
+
+        </div>
+        <div class="col-lg-12 p-2">
+            <label class="btn btn-light">
+                <input type="checkbox" @bind="Personalized" />
+                Would you like andean dev to the design
+            </label>
+        </div>
     </div>
 </section>
 
@@ -183,12 +185,11 @@
     <div class="row">
         <div class="col-lg-12 p-1">
             <div class="border border-primary my-1 p-1">
-                <DynamicComponent Type="@selectedContent"/>
+                <DynamicComponent Type="@selectedContent" />
             </div>
         </div>
     </div>
-    <br/>
-    <hr/>
+    <hr />
     <div class="border border-primary my-1 p-1">
         <Result Personalized="@personalization" Name="@selectedContent.Name" />
     </div>
@@ -221,11 +222,11 @@
             },
             {
                 "Joomla",
-                new ComponentMetadata { Name = "Joomla" }
+                new ComponentMetadata { Name = "Joomla"}
             },
             {
                 "Wordpress",
-                new ComponentMetadata { Name = "Wordpress" }
+                new ComponentMetadata { Name = "Wordpress"}
             }
             };
     private Type? selectedContent;
@@ -236,7 +237,6 @@
         set
         {
             personalization = value;
-            components[nameof(Result)].Parameters["Personalized"] = personalization;
         }
     }
     private void OnDropdownChange(ChangeEventArgs e)
