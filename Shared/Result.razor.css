@@ -1,0 +1,11 @@
+﻿#developers{
+    align-content: center;
+    text-align:center;
+    padding: 5px;
+}
+    #developers div {
+        padding: 15px;
+    }
+        #developers ul li {
+            padding: 10px;
+        }
