@@ -152,49 +152,6 @@
     </div>
 </section>
 
-
-<section class="p-1 col-12">
-    <div class="row p-2">
-        <p>
-            <label>
-                Select your platform:
-                <select @onchange="OnDropdownChange">
-                    <option value="">Select a value</option>
-                    <option value="@nameof(Azure)">Azure</option>
-                    <option value="@nameof(Joomla)">Joomla</option>
-                    <option value="@nameof(Wordpress)">Wordpress</option>
-                </select>
-            </label>
-        </p>
-    </div>
-    <div class="row p-1">
-        <div class="col-lg-12 p-1">
-
-        </div>
-        <div class="col-lg-12 p-2">
-            <label class="btn btn-light">
-                <input type="checkbox" @bind="Personalized" />
-                Would you like andean dev to the design
-            </label>
-        </div>
-    </div>
-</section>
-
-@if (selectedContent is not null)
-{
-    <div class="row">
-        <div class="col-lg-12 p-1">
-            <div class="border border-primary my-1 p-1">
-                <DynamicComponent Type="@selectedContent" />
-            </div>
-        </div>
-    </div>
-    <hr />
-    <div class="border border-primary my-1 p-1">
-        <Result Personalized="@personalization" Name="@selectedContent.Name" />
-    </div>
-}
-
 @code {
     public string description = "Miguel Estrada's personal professional website";
     public string title = "Home | Miguel Estrada Personal Site";
