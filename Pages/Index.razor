@@ -1,6 +1,4 @@
 ﻿@page "/"
-@inject NavigationManager Navigation
-@using System.Collections.Generic
 <PageTitle>@title</PageTitle>
 
 <HeadContent>
@@ -156,49 +154,4 @@
     public string description = "Miguel Estrada's personal professional website";
     public string title = "Home | Miguel Estrada Personal Site";
     public string url = "https://miguel-estrada.azurewebsites.net";
-    private void NavigateToCounterComponent()
-    {
-        Navigation.NavigateTo("counter");
-    }
-    public class ComponentMetadata
-    {
-        public string? Name { get; set; }
-        public Dictionary<string, object> Parameters { get; set; } =
-            new Dictionary<string, object>();
-    }
-    private Dictionary<string, ComponentMetadata> components =
-        new()
-            {
-            {
-                "Azure",
-                new ComponentMetadata
-                {
-                    Name = "Azure",
-                    Parameters = new() { { "Personalized", false } }
-                }
-            },
-            {
-                "Joomla",
-                new ComponentMetadata { Name = "Joomla"}
-            },
-            {
-                "Wordpress",
-                new ComponentMetadata { Name = "Wordpress"}
-            }
-            };
-    private Type? selectedContent;
-    private bool personalization;
-    private bool Personalized
-    {
-        get { return personalization; }
-        set
-        {
-            personalization = value;
-        }
-    }
-    private void OnDropdownChange(ChangeEventArgs e)
-    {
-        selectedContent = e.Value?.ToString()?.Length > 0 ?
-            Type.GetType($"miguelestradam.Shared.{e.Value}") : null;
-    }
 }
