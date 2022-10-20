@@ -1,5 +1,26 @@
-﻿<h3>Projects</h3>
+﻿@page "/projects"
+
+<PageTitle>@title</PageTitle>
+
+<HeadContent>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="@description">
+    <meta property="og:title" content="@title">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="@url">
+    <link rel="canonical" href="@url" />
+    <meta itemprop="name" content="@title">
+    <meta itemprop="description" content="@description">
+    <meta name="twitter:card" content="@description">
+    <meta name="twitter:url" content="@url">
+    <meta name="twitter:title" content="@title">
+    <meta name="twitter:description" content="@description">
+</HeadContent>
+
+<h2>Projects</h2>
 
 @code {
-
+    public string description = "Miguel Estrada's personal professional website";
+    public string title = "Home | Miguel Estrada Personal Site";
+    public string url = "https://miguel-estrada.azurewebsites.net";
 }
