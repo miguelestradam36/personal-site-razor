@@ -2,10 +2,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    width:100% !important;
 }
 
 main {
     flex: 1;
+    width: 100% !important;
 }
 
 .sidebar {

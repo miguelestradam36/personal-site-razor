@@ -1,35 +1,36 @@
 ﻿html, body {
     max-width: 100% !important;
-    width: 100%;
+    width: 100% !important;
     padding-left: 5px;
     padding-right: 5px;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
     body .page {
         max-width: 100% !important;
+        overflow-x: hidden;
     }
 
-#header {
+header {
     background-color: #E5E4E2 !important;
     color: #000000;
 }
-#footer {
+footer {
     background-color: #000000;
     color: #FFFFFF;
     border-top: 2px solid #E5E4E2;
 }
-    #footer #footer-content {
+    footer footer-content {
         margin-bottom: 20px;
         margin-top: 10px;
     }
-        #footer #footer-content img {
+        footer footer-content img {
             padding: 5%;
         }
-    #footer section {
+    footer section {
         text-align: center;
         align-self: center;
     }
-        #footer section div {
+        footer section div {
             text-align: center;
             align-self: center;
         }
