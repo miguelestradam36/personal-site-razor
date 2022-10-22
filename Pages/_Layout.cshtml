@@ -4,162 +4,162 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <base href="~/" />
-    <link href="~/favicon.webp" rel="icon">
-    <link href="~/favicon.webp" rel="apple-touch-icon">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link href="~/css/site.css" rel="stylesheet" />
-    <link href="miguelestradam.styles.css" rel="stylesheet" />
-    <meta property="og:image" content="~/favicon.webp">
-    <meta itemprop="image" content="~/favicon.webp">
-    <meta name="twitter:image" content="~/favicon.webp">
-    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
-</head>
-<body>
-    <header>
-        <section class="col-12">
-            <nav class="navbar navbar-light bg-light">
-                <div class="row">
-                    <div class="col-2">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <base href="~/" />
+        <link href="~/favicon.webp" rel="icon">
+        <link href="~/favicon.webp" rel="apple-touch-icon">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="miguelestradam.styles.css" rel="stylesheet" />
+        <meta property="og:image" content="~/favicon.webp">
+        <meta itemprop="image" content="~/favicon.webp">
+        <meta name="twitter:image" content="~/favicon.webp">
+        <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+    </head>
+    <body>
+        <header>
+            <section class="col-12">
+                <nav class="navbar navbar-light bg-light">
+                    <div class="row">
+                        <div class="col-2">
+                            <a class="navbar-brand" href="">
+                                <img src="~/favicon.webp" width="30" height="30" class="d-inline-block align-top" alt="">
+                            </a>
+                        </div>
+                        <div class="col-10">
+                            <h3 align="center" style="font-size:18px; text-align: center;">Miguel Estrada | Personal Website</h3>
+                        </div>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        @RenderBody()
+        <div id="blazor-error-ui">
+            <environment include="Staging,Production">
+                An error has occurred. This application may no longer respond until reloaded.
+            </environment>
+            <environment include="Development">
+                An unhandled exception has occurred. See browser dev tools for details.
+            </environment>
+            <a href="" class="reload">Reload</a>
+            <a class="dismiss">🗙</a>
+        </div>
+        <footer>
+            <div class="row p-1">
+                <section id="social" align="center" class="p-1">
+                    <div class="col-12 p-2">    
+                        <div class="row">
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:phone-vibrate"></iconify-icon>
+                                    <br/>
+                                    <label name="phone">Phone</label>
+                                    <p class="text-muted">
+                                        +(506) 6123-2691
+                                    </p>
+                                </address>
+                            </div>
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:pin-map"></iconify-icon>
+                                    <br/>
+                                    <label name="address">Address</label>
+                                    <p class="text-muted">
+                                        San Jose<br />
+                                        Costa Rica
+                                    </p>
+                                </address>
+                            </div>
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:newspaper"></iconify-icon>
+                                    <br/>
+                                    <label name="email">Email</label>
+                                    <p class="text-muted"><a href="mailto:miguelestradam36@gmail.com">miguelestradam36@gmail.com</a></p>
+                                </address>
+                            </div>
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:calendar2-minus"></iconify-icon>
+                                    <br />
+                                    <label name="contact">Contact</label>
+                                    <p class="text-muted">
+                                        Feel free to contact us through:             
+                                        <NavLink class="nav-link" href="contact">
+                                            Contact
+                                        </NavLink>
+                                    </p>
+                                </address>
+                            </div>
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:briefcase"></iconify-icon>
+                                    <br />
+                                    <label name="freelance">Freelancing</label>
+                                    <p class="text-muted">
+                                        From websites to data management
+                                    </p>
+                                </address>
+                            </div>
+                            <div class="col-md-4">
+                                <address>
+                                    <iconify-icon icon="bi:brush"></iconify-icon>
+                                    <br />
+                                    <label name="design">Design</label>
+                                    <p class="text-muted">
+                                        Personalized solutions for each language and case.
+                                    </p>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div align="center" class="row col-12 p-2">
+                            <div align="center" class="col-md-3">
+                                <label name="github">Github</label>
+                                <a href="" id="github"><iconify-icon icon="bi:github"></iconify-icon></a>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <label name="linkedin">Linkedin</label>
+                                <a href="" id="linkedin"><iconify-icon icon="bi:linkedin"></iconify-icon></a>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <label name="instagram">Instagram</label>
+                                <a href="" id="instagram"><iconify-icon icon="bi:instagram"></iconify-icon></a>
+                            </div>
+                            <div align="center" class="col-md-3">
+                                <label name="facebook">Facebook</label>
+                                <a href="" id="facebook"><iconify-icon icon="bi:facebook"></iconify-icon></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="credits" class="row">
+                    <div name="logo" class="text-align-center align-center" align="center">
                         <a class="navbar-brand" href="">
-                            <img src="~/favicon.webp" width="30" height="30" class="d-inline-block align-top" alt="">
+                            <img src="~/favicon.webp" width="45" height="45" class="d-inline-block align-top" alt="">
                         </a>
                     </div>
-                    <div class="col-10">
-                        <h3 align="center" style="font-size:18px; text-align: center;">Miguel Estrada | Personal Website</h3>
-                    </div>
-                </div>
-            </nav>
-        </section>
-    </header>
-    @RenderBody()
-    <div id="blazor-error-ui">
-        <environment include="Staging,Production">
-            An error has occurred. This application may no longer respond until reloaded.
-        </environment>
-        <environment include="Development">
-            An unhandled exception has occurred. See browser dev tools for details.
-        </environment>
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <footer>
-        <div class="row p-1">
-            <section id="social" align="center" class="p-1">
-                <div class="col-12 p-2">    
                     <div class="row">
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:phone-vibrate"></iconify-icon>
-                                <br/>
-                                <label name="phone">Phone</label>
-                                <p class="text-muted">
-                                    +(506) 6123-2691
-                                </p>
-                            </address>
-                        </div>
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:pin-map"></iconify-icon>
-                                <br/>
-                                <label name="address">Address</label>
-                                <p class="text-muted">
-                                    San Jose<br />
-                                    Costa Rica
-                                </p>
-                            </address>
-                        </div>
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:newspaper"></iconify-icon>
-                                <br/>
-                                <label name="email">Email</label>
-                                <p class="text-muted"><a href="mailto:miguelestradam36@gmail.com">miguelestradam36@gmail.com</a></p>
-                            </address>
-                        </div>
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:calendar2-minus"></iconify-icon>
-                                <br />
-                                <label name="contact">Contact</label>
-                                <p class="text-muted">
-                                    Feel free to contact us through:             
-                                    <NavLink class="nav-link" href="contact">
-                                        Contact
-                                    </NavLink>
-                                </p>
-                            </address>
-                        </div>
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:briefcase"></iconify-icon>
-                                <br />
-                                <label name="freelance">Freelancing</label>
-                                <p class="text-muted">
-                                    From websites to data management
-                                </p>
-                            </address>
-                        </div>
-                        <div class="col-md-4">
-                            <address>
-                                <iconify-icon icon="bi:brush"></iconify-icon>
-                                <br />
-                                <label name="design">Design</label>
-                                <p class="text-muted">
-                                    Personalized solutions for each language and case.
-                                </p>
-                            </address>
+                        <div align="center" class="col-12">
+                            <button class="alert alert-light col-lg-4">
+                                Learn about <a target="_blank" href="https://www.linkedin.com/company/75876562" class="alert-link"> <iconify-icon icon="bi:linkedin"></iconify-icon> Andean Dev</a>. Get in touch with this project.
+                            </button>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div align="center" class="row col-12 p-2">
-                        <div align="center" class="col-md-3">
-                            <label name="github">Github</label>
-                            <a href="" id="github"><iconify-icon icon="bi:github"></iconify-icon></a>
-                        </div>
-                        <div align="center" class="col-md-3">
-                            <label name="linkedin">Linkedin</label>
-                            <a href="" id="linkedin"><iconify-icon icon="bi:linkedin"></iconify-icon></a>
-                        </div>
-                        <div align="center" class="col-md-3">
-                            <label name="instagram">Instagram</label>
-                            <a href="" id="instagram"><iconify-icon icon="bi:instagram"></iconify-icon></a>
-                        </div>
-                        <div align="center" class="col-md-3">
-                            <label name="facebook">Facebook</label>
-                            <a href="" id="facebook"><iconify-icon icon="bi:facebook"></iconify-icon></a>
-                        </div>
+                    <div class="col-12 m-1 text-center">
+                        <p class="p-1">© Developed by Miguel Estrada</p>
+                        <p class="text-muted">If you want to see more about this project: <a name="github-repo" href="https://github.com/miguelestradam36/personal-site">Github Repository</a></p>
                     </div>
-                </div>
-            </section>
-            <section id="credits" class="row">
-                <div name="logo" class="text-align-center align-center" align="center">
-                    <a class="navbar-brand" href="">
-                        <img src="~/favicon.webp" width="45" height="45" class="d-inline-block align-top" alt="">
-                    </a>
-                </div>
-                <div class="row">
-                    <div align="center" class="col-12">
-                        <button class="alert alert-light col-lg-4">
-                            Learn about <a target="_blank" href="https://www.linkedin.com/company/75876562" class="alert-link"> <iconify-icon icon="bi:linkedin"></iconify-icon> Andean Dev</a>. Get in touch with this project.
-                        </button>
-                    </div>
-                </div>
-                <div class="col-12 m-1 text-center">
-                    <p class="p-1">© Developed by Miguel Estrada</p>
-                    <p class="text-muted">If you want to see more about this project: <a name="github-repo" href="https://github.com/miguelestradam36/personal-site">Github Repository</a></p>
-                </div>
-            </section>
-        </div>
-    </footer>
-    @RenderSection("Scripts", required: false)
-    <script src="_framework/blazor.server.js"></script>
-    <script src="jquery/dist/jquery.min.js" async></script>
-    <script src="jquery/src/ajax.js" async></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
-</body>
+                </section>
+            </div>
+        </footer>
+        @RenderSection("Scripts", required: false)
+        <script src="_framework/blazor.server.js"></script>
+        <script src="jquery/dist/jquery.min.js" async></script>
+        <script src="jquery/src/ajax.js" async></script>
+        <script src="https://code.iconify.design/iconify-icon/1.0.0/iconify-icon.min.js"></script>
+    </body>
 </html>
