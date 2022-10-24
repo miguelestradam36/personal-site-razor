@@ -7,8 +7,17 @@
             <div class="col-md-12">
                 <h3>Personalization level selection:</h3>
                 <p>
-                    I want a project: @Personalized
+                    I want a: 
                 </p>
+                @if (Personalized == true)
+                {
+                    <span class="btn btn-success">Personalized project</span>
+                }
+                else
+                {
+                    <span class="btn btn-danger">Not personalized project</span>
+                }
+              
             </div>
             <div class="col-md-12">
                 <h3>If interested in projects like this one:</h3>
