@@ -1,7 +1,5 @@
-﻿@page "/contact/{type?}"
-@page "/contact"
+﻿@page "/contact"
 @using miguelestradam.Data
-@inject IEmailService Send_Email;
 
 <PageTitle>@title</PageTitle>
 
@@ -35,39 +33,32 @@
     <div class="row">
         <p class="text-muted fw-bold">Gte in contact</p>
     </div>
-    <div class="row">
-        @if (type == "normal" || type == null)
-        {
-            <form>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="subject" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject">
-                    <small id="subjectHelp" class="form-text text-muted">In a few lines, tell me about yourself or your wish.</small>
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" id="htmlversion">
-                    <label class="form-check-label" for="exampleCheck1">Develover contact</label>
-                </div>
-                <button type="submit" class="btn btn-primary" @onclick="@EmailSending">Submit</button>
-            </form>
-        }
-        else
-        {
-
-        }        
+    <div class="col-md-7">
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="subject" class="form-control" id="subject" aria-describedby="subjectHelp" placeholder="Enter subject">
+                <small id="subjectHelp" class="form-text text-muted">In a few lines, tell me about yourself or your wish.</small>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="htmlversion">
+                <label class="form-check-label" for="exampleCheck1">Develover contact</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>      
     </div>
-</section>
-<section id="content-3" class="row">
-    <div class="col-12 p-2">
+    <div class="col-md-5 p-2">
         <div class="p-2 row">
             <img src="img/image-4.jpg" class="img-fluid" alt="">
         </div>
     </div>
+</section>
+<section id="content-3" class="row">
     <div class="col-md-6">
         <div class="row">
             <div class="col-md-6">
@@ -166,17 +157,6 @@
     </div>
 </section>
 @code {
-    [Parameter]
-    public string? type { get; set; }
-    protected override void OnInitialized()
-    {
-        type = type ?? "normal";
-    }
-    public void EmailSending()
-    {
-
-        type = type ?? "normal";
-    }
     public string description = "Get in contact with me";
     public string title = "Contact | Miguel Estrada Personal Site";
     public string url = "https://miguel-estrada.azurewebsites.net/contact";

@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Configuration;
 using miguelestradam.Data;
+using miguelestradam.Models;
+using miguelestradam.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,8 +12,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSingleton<WeatherForecastService>();
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
