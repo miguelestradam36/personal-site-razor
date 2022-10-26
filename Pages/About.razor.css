@@ -1,8 +1,12 @@
-﻿main section {
-    margin-bottom: 10px;
+﻿main {
+    max-width:100% !important;
 }
-
-    main section div {
-        margin-top: 5px;
-    }   
-
+    main section {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+        main section div {
+            margin-top: 5px;
+            padding-top:5px;
+            max-width: 100% !important;
+        }   
