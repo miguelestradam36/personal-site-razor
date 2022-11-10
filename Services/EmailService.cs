@@ -1,7 +1,6 @@
 ﻿using miguelestradam.Models;
 using System.Net.Mail;
 using System.Net;
-using miguelestradam.Models;
 
 namespace miguelestradam.Services
 {
